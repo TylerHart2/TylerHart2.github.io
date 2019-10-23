@@ -11,9 +11,12 @@ body {
     line-height: 1.6;
     background-color: lightgray;
 }
-
+p {
+    font-size: 100px;
+    color: white;
+}
 #showcase{
-    background-image:url('Images/pumpkin\ background.jpg');
+    background-image:url('../TylerHart2.github.io/Images/pumpkin\ background.jpg');
     background-size: cover;
     height: 100vh;
     display: flex;
