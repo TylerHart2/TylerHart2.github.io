@@ -12,13 +12,23 @@
 
 $ (() => {
 
+// ===============>>>>>> GAME PLAY <<<<<<================== 
+
+
+
+
+
+// ===============>>>>>> GENERATE KEYBOARD OF LETTERS <<<<<<==================   
+
+
+
 
 
     const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
     const $makeKeyboard = $('<div>').addClass('keyboard');
     const makeLetterRows = (() => {
-        $('body').append($makeKeyboard);
+        $('.thekeyboard').append($makeKeyboard);
         for (let i = 0; i < 26; i++) {
             const $div = $('<div>').text(letters[i]);
             $div.addClass('tile').attr('id','keyboard');
@@ -28,16 +38,23 @@ $ (() => {
 
     makeLetterRows();
 
+    $('.tile').on('click', (event) => {
+        let letter = $(event.target).text();
+        console.log(letter);
+    })
+
+
+
 // ===============>>>>>> MAKE ARRAY OF WORDS <<<<<<==================
 
     let wordBank = [
-        "pumpkin",
-        "witch",
-        "goblins",
-        "halloween",
-        "wizard",
-        "clown",
-        "ghost",
+        "pumpkin"
+        // "witch",
+        // "goblins",
+        // "halloween",
+        // "wizard",
+        // "clown",
+        // "ghost",
     ];
 
 // =================>>>>>> RANDOM WORD <<<<<<==================
@@ -50,7 +67,9 @@ $ (() => {
     let hiddenArray = [];
     for (let i = 0; i < randomWord.length; i++) {
         hiddenArray[i] = "_"; // Display "_" for missing letters
+        $('.word').append(`<div>_</div>`)
     }
+    console.log(hiddenArray);
 
     let remainingLetters = randomWord.length;
 
@@ -60,7 +79,7 @@ $ (() => {
         if (guess === null) {
             break;
         } else if (guess.length !== 1) {
-            // alert ("Please enter 1 single Letter");
+            // alert("Please enter 1 single Letter");
         } else {
             for (let j = 0; j < randomWord.length; j++) {
                 if (randomWord[j] === guess) {
@@ -72,8 +91,8 @@ $ (() => {
     }
 
 //     // >>>>>>>>>> End Game Win 
-//     alert(hiddenArray.join(" "));
-//     alert("Good job! The answer was " + randomWord);
+    // alert(hiddenArray.join(" "));
+    // alert("Good job! The answer was " + randomWord);
 
 
 

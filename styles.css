@@ -11,10 +11,7 @@ body {
     line-height: 1.6;
     background-color: lightgray;
 }
-p {
-    font-size: 100px;
-    color: white;
-}
+
 #showcase{
     background-image:url('../TylerHart2.github.io/Images/pumpkin\ background.jpg');
     background-size: cover;
@@ -103,7 +100,10 @@ p {
     margin-bottom: 40px;
 }
 
-footer {
+.footer {
     background-color: orange;
     color: white;
-}
+    position: sticky;
+    bottom: 0;
+    width: 100vw;
+} 
