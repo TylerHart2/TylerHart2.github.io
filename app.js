@@ -113,13 +113,14 @@ $ (() => {
     // ===============>>>>>> MAKE ARRAY OF WORDS <<<<<<==================
     
         let wordBank = [
-            "pumpkin",
-            "witch",
-            "goblins",
-            "halloween",
-            "wizard",
-            "clown",
+            // "pumpkin",
+            // "witch",
+            // "goblins",
+            // "halloween",
+            // "wizard",
+            // "clown",
             "ghost",
+            "spider"
         ];
     
     // =================>>>>>> RANDOM WORD <<<<<<==================
