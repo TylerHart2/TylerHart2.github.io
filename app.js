@@ -102,7 +102,7 @@ $ (() => {
                 return false;
               }
               if(wrongGuessCount <= randomWord.length+1){
-                $("img").attr("src","images/"+wrongGuessCount+".jpg");
+                $("img").attr("src","Images/"+ wrongGuessCount+".jpg");
               }
             }
         });
