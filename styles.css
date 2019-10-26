@@ -11,9 +11,7 @@ body {
     line-height: 1.6;
     background-color: darkgrey;
 }
-
 /* ================= >>>>>>> LANDING PAGE STYLES <<<<<<<<<<<<<<================= */
-
 
 #showcase{
     background-image:url('../TylerHart2.github.io/Images/pumpkin\ background.jpg');
@@ -26,7 +24,6 @@ body {
     text-align: center;
     padding: 0 20px;
 }
-
 
 #showcase h1 {
     font-family: 'Eater';
@@ -60,37 +57,13 @@ body {
 
 }
 
-
 /* ================= >>>>>>> MAIN GAMEBOARD STYLES <<<<<<<<<<<<<<=============== */
-
-/* .gameboard {
-
-    border: 1px solid yellow;
-    height: 500px;
-    width: 70%;
-    margin: auto;
-    margin-top: 70px;
-    margin-bottom: 40px;
-} */
-
-
 
 .word {
     display: flex;
     justify-content: center;
-    letter-spacing: 30px;
     align-self: center;
-    /* padding: .3em;
-    margin: .1em; */
-    /* width: 60px;
-    height: 60px;
-    border: 1px solid #000;  */
-    /* font-size: 24px;
-    text-align: center;
-    line-height: 70px; */ 
-
 }
-
 
 .gameboard img {
    display: block;
@@ -111,7 +84,6 @@ body {
     margin: auto;
     padding: 20px;
     overflow: scroll;
-    
 }
 
 .tile {
@@ -126,8 +98,6 @@ body {
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-    
-    
 }
 
 .tile:hover {
@@ -136,8 +106,6 @@ body {
   	-webkit-transform: scale(1.1);
   	transform: scale(1.1);  
 }
-
-
 
 /* ==================== >>>>>>> FOOTER STYLES <<<<<<<<<<<<<<================= */
 .footer {
