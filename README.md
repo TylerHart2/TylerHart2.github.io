@@ -1,7 +1,7 @@
 # HANGMAN
 -------------
 
-Link to live site: (http://https://tylerhart2.github.io/)
+Link to live site: (http://tylerhart2.github.io/)
 
 ## Technologies Used 
 * HTML
