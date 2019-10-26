@@ -7,38 +7,13 @@
 // Win if all the letters are guessed
 // Lose if all hangman body parts show up
 
-    // ======================>>>>>> ROUGH DRAFT <<<<<<<< ==========================
-    
-        // let remainingLetters = randomWord.length;
-    
-    
-        // while (remainingLetters > 0) {
-        //     // alert(hiddenArray.join(" "));
-        //     // let guess = prompt("Guess a letter");
-        //     if (guess === null) {
-        //         break;
-        //     } else if (guess.length !== 1) {
-        //         // alert("Please enter 1 single Letter");
-        //     } else {
-        //         for (let j = 0; j < randomWord.length; j++) {
-        //             if (randomWord[j] === guess) {
-        //                 hiddenArray[j] = guess;
-        //                 remainingLetters --;
-        //             }
-        //         }
-        //     }
-        // }
-    
-    
-    //     // >>>>>>>>>> End Game Win
-        // alert(hiddenArray.join(" "));
-        // alert("Good job! The answer was " + randomWord);
-
-        // ==================>>>>>> END ROUGH DRAFT <<<<<<<< =====================
 
 
 
 $ (() => {
+
+    // ===============>>>>>> GAME PLAY <<<<<<==================
+    
     // ===============>>>>>> GENERATE KEYBOARD OF LETTERS <<<<<<==================
     
         const letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
@@ -61,7 +36,7 @@ $ (() => {
         // array to input current right letters
         var currentWord = [];
         // used to keep track of wrong guess count
-        var wrongGuessCount = 1;
+        var wrongGuessCount = 0;
     
         $('.tile').on('click', (event) => {
             let letter = $(event.target).text().toLowerCase();
@@ -97,12 +72,12 @@ $ (() => {
               // logic for wrong guess count
               wrongGuessCount+=1;
               console.log("wrongGuessCount",wrongGuessCount);
-              if (wrongGuessCount > randomWord.length+1){
+              if (wrongGuessCount >randomWord.length+1){
                 alert("You Lost !!");
                 return false;
               }
               if(wrongGuessCount <= randomWord.length+1){
-                $("img").attr("src","Images/"+ wrongGuessCount+".jpg");
+                $("img").attr("src","images/"+wrongGuessCount+".jpg");
               }
             }
         });
@@ -113,14 +88,13 @@ $ (() => {
     // ===============>>>>>> MAKE ARRAY OF WORDS <<<<<<==================
     
         let wordBank = [
-            // "pumpkin",
-            // "witch",
+            // "pumpkin"
+            "witch"
             // "goblins",
             // "halloween",
             // "wizard",
             // "clown",
-            "ghost",
-            "spider"
+            // "ghost",
         ];
     
     // =================>>>>>> RANDOM WORD <<<<<<==================
@@ -139,6 +113,67 @@ $ (() => {
         for (let i = 0; i < randomWord.length; i++) {
             hiddenArray[i] = "_"; // Display "_" for missing letters
              $('.word').append(`_`);  // appends "_" to the class of word in html
-        }  
+            // if (letter === randomWord[i]) {
+            //      $('.word').append(randomWord[i]);
+            // }
+        }
+    
+        // for (let i = 0; i < randomWord.length; i++){
+        //     $('.word').append(`<div class ='letter ' + i + ' '>_</div>`);
+        //     $('.word').find(':nth-child(" + (i + 1) + ")').text(wordBank[i])
+        //     $('.letter').css('color', "red");
+        // }
+    
+    
+    // ======================>>>>>> ROUGH DRAFT <<<<<<<< ==========================
+    
+        // let remainingLetters = randomWord.length;
+    
+    
+        // while (remainingLetters > 0) {
+        //     // alert(hiddenArray.join(" "));
+        //     // let guess = prompt("Guess a letter");
+        //     if (guess === null) {
+        //         break;
+        //     } else if (guess.length !== 1) {
+        //         // alert("Please enter 1 single Letter");
+        //     } else {
+        //         for (let j = 0; j < randomWord.length; j++) {
+        //             if (randomWord[j] === guess) {
+        //                 hiddenArray[j] = guess;
+        //                 remainingLetters --;
+        //             }
+        //         }
+        //     }
+        // }
+    
+    
+    //     // >>>>>>>>>> End Game Win
+        // alert(hiddenArray.join(" "));
+        // alert("Good job! The answer was " + randomWord);
+    
+    
+    // ==========>>>>> LOGIC FOR IS GUESS CORRECT <<<<<<<<<=============
+    
+    
+    
+    
+    
+    
+    // =========>>>>> LOGIC FOR AN INCORRECT GUESS <<<<<<<<<===========
+    
+        // const guessWrong = 0;
+        // $('.tile').on('click', () => {
+        //     $(this).addClass('used');
+        //     $(this).prop('disabled', 'true');
+        //     let matchfound = false;
+        // })
+    
+    
+        // if (matchfound === false) {
+        //     guessWrong += 1;
+        //     $('.image').attr('src', 'Images/' + guessWrong + ".jpg");
+        // }
+    
     });
     
