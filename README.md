@@ -27,7 +27,9 @@ If the Player wins or loses an alert will pop up displaying that information and
 
 I originally took a lot of time trying to figure out how to change the image if a user was guessing incorrectly. 
 
+### Unsolved problems
 
+It does not seem to happen all the time but, every so often the last image breaks on the hangman gameboard.
 
 
 
